@@ -1,33 +1,7 @@
-<script type="text/javascript" language="javascript">
 
-const sysInfo = async () => {
-    let headers = new Headers();
-
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
-    headers.append('Origin','http://127.0.0.1:8080');
-
-    const response = await fetch('http://127.0.0.1:8080/info', {
-         method: 'GET', // *GET, POST, PUT, DELETE, etc.
-         mode: 'cors', // no-cors, *cors, same-origin
-         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-         credentials: 'same-origin', // include, *same-origin, omit
-    });
-    const myJson = await response.json(); //extract JSON from the http response
-    console.log(myJson['currentTime'].toString());
-    document.getElementById('date').innerHTML = myJson['currentTime'];
-    return myJson;
-}
-
-function show() {
-     sysInfo();
-}
-
-
-</script>
 
 <html>
-
+<script type="text/javascript" src="main.js"></script>
 <p> Click the following button to see the effect. </p>
 <p id="date"></p>
 <button onclick="show()"> Call sysInfo()</button>
