@@ -2,6 +2,17 @@
 
 <html>
 <script type="text/javascript" src="main.js"></script>
+<script>
+    window.setInterval('refresh()', 10000);
+    // Call a function every 10000 milliseconds
+    // (OR 10 seconds).
+
+    // Refresh or reload page.
+    function refresh() {
+        window .location.reload();
+    }
+</script>
+<body onload="show()">
 <p> Click the following button to see the effect. </p>
 <p id="date"></p>
 <button onclick="show()"> Call show()</button>
