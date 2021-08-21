@@ -14,8 +14,10 @@ const sysInfo = async () => {
     const myJson = await response.json(); //extract JSON from the http response
     console.log(myJson['currentTime'].toString());
     document.getElementById('date').innerHTML = myJson['currentTime'];
-
+    document.getElementById('proc').innerHTML = myJson['proc'];
+    document.getElementById('mem').innerHTML = myJson['mem'];
 }
+
 
 function show() {
      sysInfo();

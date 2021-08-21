@@ -1,20 +1,38 @@
-
-
 <html>
 <script type="text/javascript" src="main.js"></script>
 <script>
-    window.setInterval('refresh()', 10000);
-    // Call a function every 10000 milliseconds
-    // (OR 10 seconds).
+    window.setInterval('refresh()', 5000);
+    // Call a function every 5000 milliseconds
+    // (OR 5 seconds).
 
     // Refresh or reload page.
     function refresh() {
         show();
     }
+
 </script>
 <body onload="show()">
 <p> Click the following button to see the effect. </p>
 <p id="date"></p>
 <button onclick="show()"> Call show()</button>
+<table>
+    <tr>
+        <td>
+            Running proccesses
+        </td>
+        <td>
+            Memmory usage
+        </td>
+    </tr>
+    <tr>
+        <td id="proc">
+
+        </td>
+        <td id="mem">
+
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
